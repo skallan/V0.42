@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="skoab_database" uuid="786df309-29ae-4b4c-a4b0-785537f7f339">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Hedin\Documents\programering\V0.41\skoab_database.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/skoab_database.sqlite3</jdbc-url>
       <libraries />
     </data-source>
   </component>

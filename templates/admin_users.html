@@ -2,40 +2,49 @@
 {% block content %}
 {% set active_page = "show" %}
 
-    <head>
-    <style>
-        .container {
-            height: 900px;
-        }
-        .row {
-            text-align: center ;
-        }
-    </style>
+    <head xmlns="http://www.w3.org/1999/html">
+        <style>
+            .container {
+                height: 900px;
+            }
+            .row {
+                text-align: center ;
+            }
+            form, table {display:inline; margin:0px; padding:0px;}
+        </style>
 
     </head>
-    <body>
 
+    <body>
     <div class="row">
-    {% if not session.logged_in %}
-       <script language="javascript">
-    window.location.href = "{{ url_for('login') }}"
-        </script>
-    {% else %}
-    {% if message!=None %}
-    <div class=flash style="color: red">
-        <h4>{{ message }}</h4>
-    </div>
-    {% endif %}
-    <h2 style="text-decoration: underline">List of user id and username:</h2>
-    {% for x in all_users %}
-    <li><h4>User id: {{ x[0] }}, Username:  {{ x[1] }}</h4>
-    <form onsubmit="return confirmation()" action="{{ url_for('admin_users') }}" method=post>
-    <input type=submit name={{ x[0] }} value=Promote class="btn btn-success" role="button">
-    <input type=submit name={{ x[1] }} value=Remove class="btn btn-danger" role="button">
-    </form>
-    </li><br>
-    {% endfor %}
-    {% endif %}
+        {% if not session.logged_in %}
+            <script language="javascript">
+                window.location.href = "{{ url_for('login') }}"
+            </script>
+        {% else %}
+            {% if message!=None %}
+                <div class=flash style="color: red">
+                    <h4>{{ message }}</h4>
+                </div>
+            {% endif %}
+            <h2 style="text-decoration: underline">List of user id and username:</h2>
+            {% for x in all_users %}
+                <li><h4>User id: {{ x[0] }}, Username:  {{ x[1] }}</h4>
+                    <form onsubmit="return confirmation()" action="{{ url_for('admin_users') }}" method=post>
+                        <input type=submit name="action" class="btn btn-success" value="Promote">
+                        <input type="hidden" name="name" value="{{ x[1] }}">
+                    </form>
+                    <form onsubmit="return confirmation()" action="{{ url_for('admin_users') }}" method=post>
+                        <input type=submit name="action" class="btn btn-danger"  value="Demote">
+                        <input type="hidden" name="name" value="{{ x[1] }}">
+                    </form>
+                    <form onsubmit="return confirmation()" action="{{ url_for('admin_users') }}" method=post>
+                        <input type=submit name="action" class="btn btn-danger" value="Remove">
+                        <input type="hidden" name="name" value="{{ x[1] }}">
+                    </form>
+                </li><br>
+            {% endfor %}
+        {% endif %}
     </div>
     </body>
 

@@ -216,6 +216,12 @@ def get_all_users():
     result = cursor.fetchall()
     return result
 
+def get_all_users_except_logged(name):
+    c = get_db()
+    cursor = c.cursor()
+    cursor.execute("SELECT * from user where username!=?", [name])
+    result = cursor.fetchall()
+    return result
 
 def remove_user(name):
     """

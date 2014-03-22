@@ -65,6 +65,22 @@ def add_offer():
     return render_template("add_offer.html")
 
 
+@app.route('/my_page')
+def mypage():
+    """
+    The app route for the my page site.
+
+    :return: :rtype: Returns the rendered my page site.
+    """
+
+    return render_template("my_page.html")
+
+@app.route('/user_info/<name>')
+def userinfo(name):
+
+    userinfo= db.get_user(name)
+    return render_template("user_info.html", user= userinfo)
+
 @app.route('/products')
 def product():
     """
@@ -85,7 +101,7 @@ def specproduct(name):
     :return: :rtype: Returns the rendered template for productdetail.html, related products, name, comments ans avaliable sizes.
     """
     sizes = []
-    product= db.get_specific_product("product_name",name)
+    product= db.get_specific_product("product_name",name,"")
     if str(product[0][6]) == "Jacka" or str(product[0][6]) == "Jacket":
         sizes = ["Small", "Medium", "Large", "XL", "XXL", "XXXL"]
     else:
@@ -105,8 +121,32 @@ def speccategory(name):
     :param name: The name of the parameter in the specified category
     :return: :rtype: Returns the rendered html-template, for category with the return values of product and name
     """
-    product= db.get_specific_product("category",name)
+    product= db.get_specific_product("category",name,"")
     return render_template("category.html",data=product,name=name)
+
+@app.route('/category/<category>/sorted_by_<sort>')
+def sortby(category,sort):
+    product = db.get_specific_product("category",category,sort)
+    return render_template("category.html",data=product)
+
+@app.route('/kuk', methods=['GET', 'POST'])
+def changepassword():
+    password=request.form['old_password']
+    username= session['username']
+    if db.check_password(username,password) == False:
+        print(request.form['new_password'])
+        error = 'Invalid password'
+        print("1")
+    elif request.form['new_password'] != request.form['confirm_password']:
+            error = 'Inputted password and confirmed password, must match'
+            print("olikA LÖSEN")
+    else:
+        print("2")
+        db.change_password(session['username'],request.form['new_password'])
+        print("3")
+    return redirect(url_for('userinfo(username)'))
+
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -208,7 +248,7 @@ def alter(name):
 
     :return: :rtype: Returns the rendered add product site.
     """
-    data = db.get_specific_product("product_name",name)
+    data = db.get_specific_product("product_name",name,"")
     return render_template("alter.html",data=data,name=name)
 
 @app.route('/about_us')
@@ -241,12 +281,6 @@ def show():
     return render_template("show.html", data=all)
 
 
-#Visar samtliga produkter tillagda i databasen men på en helt odesignad sida , bara här för att testa olika funktioner.
-#Sidan är ej tillgänglig från frontend och skall tas bort senare
-@app.route('/show_products')
-def show_products():
-    allproducts = db.get_all_products()
-    return render_template("show_products.html", data=allproducts)
 
 # Allows you to log out when youve been log in and redirects you to the startpage after doing so
 @app.route('/logout')
@@ -488,7 +522,7 @@ def list_cart():
     a_sizes = []
 
     for x in session['cart']:
-        item = db.get_specific_product("product_id", x['item'])[0]
+        item = db.get_specific_product("product_id", x['item'],"")[0]
         cart_db.append(item)
         sizes.append(x['size'])
         qttys.append(x['quantity'])
@@ -533,7 +567,7 @@ def specorders(name):
     order_details = db.get_order_products(name)
     product_details = []
     for x in order_details:
-        product_details.append(db.get_specific_product("product_id", str(x[1]))[0])
+        product_details.append(db.get_specific_product("product_id", str(x[1]))[0],"")
     return render_template("orderdetail.html",order_nr=order_details[0][0] ,order_details=zip(order_details,product_details))
 
 # Implementera inte igen föränn vi skrivit in databasen som den är nu i db.py

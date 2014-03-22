@@ -58,45 +58,54 @@
                     <a href="/cart">Cart</a>
                 </li>
                 {% if session.logged_in %}
+                    <li><a class=""> Logged in as: </a> </li>
                     <li {% if "show"  == active_page %}
                         class="active" {% elif "add product" == active_page %}
                         class="active"
                     {% endif%}>
-
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        Admin Panel
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="/show">Read messages</a>
-                        </li>
-                        <li>
-                            <a href="/add_product">Add Products</a>
-                        </li>
-                        <li>
-                            <a href="/add_offer">Add Offers</a>
-                        </li>
-                        <li>
-                            <a href="/remove_product">Remove Products</a>
-                        </li>
-                        <li>
-                            <a href="/admin_users">Promote/remove Users</a>
-                        </li>
-                    </ul>
-                {% endif %}
-                </li>
-
-
-
-
-                <li {% if "login" == active_page %} class="active"{% endif%}>
-                    {% if not session.logged_in %}
-                        <a href="/login">Login</a>
+                    {% if session.authority == 2 %}
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Admin Panel
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/show">Read messages</a>
+                            </li>
+                            <li>
+                                <a href="/add_product">Add Products</a>
+                            </li>
+                            <li>
+                                <a href="/remove_product">Remove Products</a>
+                            </li>
+                            <li>
+                                <a href="/admin_users">Promote/remove Users</a>
+                            </li>
+                            <li>
+                                <a href="/add_offer">Add Offers</a>
+                            </li>
+                        </ul>
                     {% else %}
-
-                        <a href="/logout">Logout</a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            {{ session.username }}
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/user_info/{{ session.username }}">Change my information</a>
+                            </li>
+                            <li>
+                                <a href="/contact">Contact us</a>
+                            </li>
+                            <li>
+                                <a href="/my_orders">Review your orders</a>
+                            </li>
+                            <li>
+                                <a href="/cart">See your shoppingcart</a>
+                            </li>
+                        </ul>
                     {% endif %}
+                {% endif %}
                 </li>
                 <li>
 

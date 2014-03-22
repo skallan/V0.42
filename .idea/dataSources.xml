@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4" />
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4264993552">
+    <data-source source="LOCAL" name="message" uuid="c44e7e84-7e07-4ea1-81fe-6ef1ce50ccfd">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Joel\Documents\GitHub\V0.42\message.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
 

@@ -93,6 +93,11 @@ def check_password(username, password):
         else:
             return False
 
+def change_password(username,password):
+    c = get_db()
+    c.execute("UPDATE user SET Password=? WHERE username =?", (password, username))
+    c.commit()
+
 def add_new_message(name, message, email, category):
     """
     Allows the user to write messages that gets put into the database
@@ -235,7 +240,7 @@ def check_username(name):
         return True
 
 
-def get_specific_product(type,id):
+def get_specific_product(type,id,sort):
     """
     Allows the website to pick out a specific product based on a search of an attribute and search word.
 
@@ -245,9 +250,19 @@ def get_specific_product(type,id):
     """
     c = get_db()
     s="select * from product where "+type+"='"+id+"'"
+    if(sort !=""):
+        s=s+" ORDER BY "+sort+""
+    print(s)
     result = c.execute(s)
     c.commit()
     return result.fetchall()
+
+def get_user(username):
+    c = get_db()
+    result = c.execute('select * from user where username=?', [username])
+    c.commit()
+    user=result.fetchall()
+    return user
 
 def get_authority(user_name):
     c = get_db()

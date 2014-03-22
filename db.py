@@ -4,13 +4,18 @@ __author__ = 'TungDesign'
 from sqlite3 import dbapi2 as sqlite3
 from flask import g
 
+
+
+
+
+
 def connect_db():
     """
     Connects to the specific database.
 
     :return: :rtype: Returns the connection value of the database.
     """
-    print "Connectar db"
+    print "Connecting db"
     try:
         rv = sqlite3.connect("skoab_database.sqlite3")
         print "Creating db"

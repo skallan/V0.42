@@ -46,7 +46,7 @@ def setup():
     db.execute("create table product(product_id integer primary key ,product_name text,price integer ,max_size integer,min_size integer,brand text ,category text,info text,classification text, pic_url integer)")
     db.commit()
 
-def register_user(username,password,firstname,lastname):
+def register_user(username,password,firstname,lastname, email, telephone, org_no, org_name, address_field1, address_field2, zipcode, city):
     """
     Creates a new user by taking information the person have filled in at the frontend and putting it in a database.
 
@@ -59,7 +59,7 @@ def register_user(username,password,firstname,lastname):
     if check_username(username):
         return False
     else:
-        db.execute('insert into user (username, password, firstname, surname) values (?, ?, ?,?)', (username, password, firstname, lastname))
+        db.execute('insert into user (username, password, firstname, surname, email, telephone, org_no, org_name, address_field1, address_field2, zipcode, city) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (username, password, firstname, lastname, email, telephone, org_no, org_name, address_field1, address_field2, zipcode, city))
         db.commit()
         return True
 

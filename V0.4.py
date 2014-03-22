@@ -162,6 +162,7 @@ def register():
     :return: :rtype: Returns the redirect for the homepage if the user is succesfully registered
     else renders the register home page if the user fails to login properly.
     """
+    print "har"
     if request.method == 'POST':
         if request.form['username'] == "":
             error = 'Must input username'
@@ -171,12 +172,35 @@ def register():
             error = 'Must input firstname'
         elif request.form['lastname'] == "":
             error = 'Must input lastname'
+        elif request.form['email'] == "":
+            error = 'Must input email'
+        elif request.form['org_no'] == "":
+            error = 'Must input organization number or SSN'
+        elif request.form['org_name'] == "":
+            error = 'Must input company name'
+        elif request.form['address_field1'] == "":
+            error = 'Must input Address'
+        elif request.form['zipcode'] == "":
+            error = 'Must input zip code'
+        elif request.form['city'] == "":
+            error = 'Must input city'
         else:
+            print "hit"
             username = request.form['username']
             password = request.form['password']
             firstname = request.form['firstname']
             lastname = request.form['lastname']
-            if not db.register_user(username, password, firstname, lastname):
+            email = request.form['email']
+            telephone = request.form['telephone']
+            org_no = request.form['org_no']
+            org_name = request.form['org_name']
+            address_field1 = request.form['address_field1']
+            address_field2 = request.form['address_field2']
+            zipcode = request.form['zipcode']
+            city = request.form['city']
+            print "dit"
+
+            if not db.register_user(username, password, firstname, lastname, email, telephone, org_no, org_name, address_field1, address_field2, zipcode, city):
                 message = 'The username already exists'
                 return render_template('register.html', message=message)
             else:
@@ -186,6 +210,7 @@ def register():
             return redirect(url_for('index'))
         return render_template('register.html', error=error)
     return render_template('register.html')
+
 
 
 @app.route('/login', methods=['GET', 'POST'])

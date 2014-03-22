@@ -33,16 +33,32 @@
     <form action="{{ url_for('register') }}" method=post>
         <dl>
             <dt>Register here
-            <dt>Username:
+            <dt>Username*
             <dd><input type=text name=username>
-            <dt>Password:
+            <dt>Password*
             <dd><input type=password name=password>
-            <dt>Confirm Password:
+            <dt>Confirm Password*
             <dd><input type=password name=confirmed_password>
-            <dt>Firstname:
+            <dt>Firstname*
             <dd><input type=text name=firstname>
-            <dt>Lastname:
+            <dt>Lastname*
             <dd><input type=text name=lastname>
+            <dt>Email*
+            <dd><input type=text name=email>
+            <dt>Telephone
+            <dd><input type=text name=telephone>
+            <dt>Organisation number or SSN*
+            <dd><input type=text name=org_no>
+            <dt>Company name*
+            <dd><input type=text name=org_name>
+            <dt>Address field 1*
+            <dd><input type=text name=address_field1>
+            <dt>Address field 2
+            <dd><input type=text name=address_field2>
+            <dt>zip code*
+            <dd><input type=number name=zipcode>
+            <dt>city*
+            <dd><input type=text name=city>
             <dd><input type=submit value=Register>
         </dl>
     </form>

@@ -75,11 +75,13 @@ def mypage():
 
     return render_template("my_page.html")
 
+
 @app.route('/user_info/<name>')
 def userinfo(name):
 
     userinfo= db.get_user(name)
     return render_template("user_info.html", user= userinfo)
+
 
 @app.route('/products')
 def product():
@@ -113,6 +115,7 @@ def specproduct(name):
     comments = db.get_messages(product_id)
     return render_template("productdetail.html",data=product,name=name,comments=comments, sizes=sizes)
 
+
 @app.route('/category/<name>')
 def speccategory(name):
     """
@@ -121,13 +124,15 @@ def speccategory(name):
     :param name: The name of the parameter in the specified category
     :return: :rtype: Returns the rendered html-template, for category with the return values of product and name
     """
-    product= db.get_specific_product("category",name,"")
+    product= db.get_specific_product("category",name,"Price")
     return render_template("category.html",data=product,name=name)
+
 
 @app.route('/category/<category>/sorted_by_<sort>')
 def sortby(category,sort):
     product = db.get_specific_product("category",category,sort)
     return render_template("category.html",data=product)
+
 
 @app.route('/kuk', methods=['GET', 'POST'])
 def changepassword():
@@ -147,7 +152,6 @@ def changepassword():
     return redirect(url_for('userinfo(username)'))
 
 
-
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     """
@@ -165,12 +169,34 @@ def register():
             error = 'Must input firstname'
         elif request.form['lastname'] == "":
             error = 'Must input lastname'
+        elif request.form['email'] == "":
+            error = 'Must input email'
+        elif request.form['org_no'] == "":
+            error = 'Must input organization number or SSN'
+        elif request.form['org_name'] == "":
+            error = 'Must input company name'
+        elif request.form['address_field1'] == "":
+            error = 'Must input Address'
+        elif request.form['zipcode'] == "":
+            error = 'Must input zip code'
+        elif request.form['city'] == "":
+            error = 'Must input city'
         else:
             username = request.form['username']
             password = request.form['password']
             firstname = request.form['firstname']
             lastname = request.form['lastname']
-            if not db.register_user(username, password, firstname, lastname):
+            email = request.form['email']
+            telephone = request.form['telephone']
+            org_no = request.form['org_no']
+            org_name = request.form['org_name']
+            address_field1 = request.form['address_field1']
+            address_field2 = request.form['address_field2']
+            zipcode = request.form['zipcode']
+            city = request.form['city']
+            print "dit"
+
+            if not db.register_user(username, password, firstname, lastname, email, telephone, org_no, org_name, address_field1, address_field2, zipcode, city):
                 message = 'The username already exists'
                 return render_template('register.html', message=message)
             else:
@@ -281,7 +307,6 @@ def show():
     return render_template("show.html", data=all)
 
 
-
 # Allows you to log out when youve been log in and redirects you to the startpage after doing so
 @app.route('/logout')
 def logout():
@@ -306,11 +331,9 @@ def admin_users():
     if request.method == 'POST':
         for x in user_name:
             if str(x[0]) in request.form:
-                print str(x[0])
                 message = handle_users(x[1], "promote")
                 return render_template("admin_users.html", all_users=user_name, message=message)
             elif str(x[1]) in request.form:
-                print str(x[1])
                 message = handle_users(x[1], "remove")
                 user_names = db.get_all_users()
                 return render_template("admin_users.html", all_users=user_names, message=message)
@@ -462,10 +485,11 @@ def add_to_cart():
     :return: url for products page
     """
     item = request.form['button']
-    size = request.form['size']
+    price = int(request.form['price'])
+    size = int(request.form['size'])
     quantity = int(request.form['quantity'])
     for x in session['cart']:
-        if x['item']==item or x['size']==size:
+        if x['item']==item and x['size']==size:
             x['quantity'] = quantity
             return redirect(url_for('product'))
     if quantity > 0:
@@ -496,14 +520,11 @@ def edit_post_in_cart():
     index = int(request.form['button'])
     qtty = int(request.form['quantity'])
     size = request.form['size']
-    print "in edit"
-    print qtty
 
     for x in session['cart']:
         if int(x['cart_index']) == index:
             x['quantity'] = qtty
             x['size'] = size
-
 
     return redirect(url_for("list_cart"))
 
@@ -538,7 +559,6 @@ def list_cart():
                 sz.append(i)
                 i += 1
         a_sizes.append(sz)
-    print session['cart']
     return render_template("cart.html", data=cart_db, sizes=sizes, qttys=qttys, total=total, index=index,
                            a_sizes=a_sizes)
 
@@ -547,11 +567,12 @@ def add_order():
     """
     """
     date_placed = str(datetime.now())
-    date_delivered = "29 / 05 / 1814"
+    total =0
     products = []
     for x in session['cart']:
-        products.append([x['item'], x['size'], x['quantity']])
-        db.add_new_order(db.get_user_id(session['username']), date_placed, date_delivered, products)
+        products.append([x['item'], x['size'], x['quantity'], x['price']])
+        total += x['price']*x['quantity']
+    db.add_new_order(db.get_user_id(session['username']), date_placed, products, total)
     session['cart'] = []
     return render_template("cart.html")
 

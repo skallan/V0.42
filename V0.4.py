@@ -162,7 +162,6 @@ def register():
     :return: :rtype: Returns the redirect for the homepage if the user is succesfully registered
     else renders the register home page if the user fails to login properly.
     """
-    print "har"
     if request.method == 'POST':
         if request.form['username'] == "":
             error = 'Must input username'
@@ -210,7 +209,6 @@ def register():
             return redirect(url_for('index'))
         return render_template('register.html', error=error)
     return render_template('register.html')
-
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -436,6 +434,7 @@ def removeproduct():
     db.remove_product(Product_ID)
     return "Thank you <a href='" + url_for("remove_product") + "'>Back to form</a>"
 
+
 def handle_users(user_name, action):
     """
     A function to handle the promotion or removal of users through using functions
@@ -496,9 +495,9 @@ def add_to_cart():
         if x['item']==item and x['size']==size:
             x['quantity'] = quantity
             return redirect(url_for('product'))
-
-    session['cart_length']+=1
-    session['cart'].append({'item':item, 'cart_index':session['cart_length'],'quantity':quantity,'size':size, 'a_sizes':[], 'price':price})
+    if quantity > 0:
+        session['cart_length']+=1
+        session['cart'].append({'item':item, 'cart_index':session['cart_length'],'quantity':quantity,'size':size, 'a_sizes':[]})
     return redirect(url_for('product'))
 
 
@@ -547,7 +546,7 @@ def list_cart():
     a_sizes = []
 
     for x in session['cart']:
-        item = db.get_specific_product("product_id", x['item'])[0]
+        item = db.get_specific_product("product_id", x['item'],"")[0]
         cart_db.append(item)
         sizes.append(x['size'])
         qttys.append(x['quantity'])
@@ -592,7 +591,7 @@ def specorders(name):
     order_details = db.get_order_products(name)
     product_details = []
     for x in order_details:
-        product_details.append(db.get_specific_product("product_id", str(x[1]))[0])
+        product_details.append(db.get_specific_product("product_id", str(x[1]))[0],"")
     return render_template("orderdetail.html",order_nr=order_details[0][0] ,order_details=zip(order_details,product_details))
 
 # Implementera inte igen föränn vi skrivit in databasen som den är nu i db.py

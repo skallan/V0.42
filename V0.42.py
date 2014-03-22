@@ -494,7 +494,7 @@ def add_to_cart():
             return redirect(url_for('product'))
     if quantity > 0:
         session['cart_length']+=1
-        session['cart'].append({'item':item, 'cart_index':session['cart_length'],'quantity':quantity,'size':size, 'a_sizes':[]})
+        session['cart'].append({'item':item,'price':price, 'cart_index':session['cart_length'],'quantity':quantity,'size':size, 'a_sizes':[]})
     return redirect(url_for('product'))
 
 
@@ -566,7 +566,7 @@ def list_cart():
 def add_order():
     """
     """
-    date_placed = str(datetime.now())
+    date_placed = str(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     total =0
     products = []
     for x in session['cart']:
@@ -588,7 +588,7 @@ def specorders(name):
     order_details = db.get_order_products(name)
     product_details = []
     for x in order_details:
-        product_details.append(db.get_specific_product("product_id", str(x[1]))[0],"")
+        product_details.append(db.get_specific_product("product_id", str(x[1]),"")[0])
     return render_template("orderdetail.html",order_nr=order_details[0][0] ,order_details=zip(order_details,product_details))
 
 # Implementera inte igen föränn vi skrivit in databasen som den är nu i db.py

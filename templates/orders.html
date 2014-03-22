@@ -2,6 +2,13 @@
 {% block content %}
 {% set active_page = "show" %}
 
+    <head>
+    <style>
+        .order{
+            border-bottom: 1px solid #e5e5e5;
+        }
+    </style>
+    </head>
     <body>
 
     <div class="row">
@@ -14,12 +21,16 @@
     <div class=flash>
         {{ message }}
     </div>
-    <h3>Products in order nr List of orders for {{ session.username }}</h3>
+    <h3>Orders for {{ session.username }}</h3>
     {% for x in order_list %}
-    <li>Order nr id: {{ x[0] }} Date placed:  {{ x[2] }}
+    <div class="order">
+    <div class='row'>
+    <h4>Order #{{ x[0] }} placed at {{x[2]}}</h4>
     <a class="btn btn-success" href="/orders/{{ x[0] }}" role="button">View order details &raquo;</a>
-    </li><br>
+    </div>
+    </div>
     {% endfor %}
+
     {% endif %}
     </div>
     </body>

@@ -5,10 +5,6 @@ from sqlite3 import dbapi2 as sqlite3
 from flask import g
 
 
-
-
-
-
 def connect_db():
     """
     Connects to the specific database.
@@ -340,7 +336,7 @@ def get_user_orders(user_id):
 def get_order_products(order_id):
     c = get_db()
     cursor = c.cursor()
-    cursor.execute('SELECT * from order_product_occurrance where order_id = ?', [order_id])
+    cursor.execute('SELECT * from order_product_occurrence where order_id = ?', [order_id])
     return cursor.fetchall()
 
 if __name__ == '__main__':

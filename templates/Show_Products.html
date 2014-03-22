@@ -1,0 +1,16 @@
+{% extends "masterpage.html" %}
+{% block content %}
+    <a href="../">Go back to Startpage</a>
+    <br>
+    <h2>Forum</h2>
+    {%  for mess in data %}
+
+        <br> Art_no: {{ mess[0] }} <br>
+        <b>{{ mess[1] }}</b> Costs: {{ mess[2] }}  SEK<br/>
+        <br> It got sizes between {{ mess[3] }} and {{ mess[4] }} <br>
+        <br> The Brand of the product is {{ mess[5] }} and it falls into the catagory of {{ mess[6] }} <br>
+        <br> About the product: {{ mess[7] }} <br>
+        <br> CATEGORY {{ mess[8] }} <br>
+        <br>  <img src="/static/uploads/{{ mess[9] }}"> <br>
+    {% endfor %}
+{% endblock %}

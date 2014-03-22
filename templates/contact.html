@@ -1,0 +1,61 @@
+{%  extends "masterpage.html" %}
+{% set active_page = "contact" %}
+{%  block content %}
+
+    <head xmlns="http://www.w3.org/1999/html">
+        <style>
+            .get-in-touch {
+                position: relative;
+                margin: 0 auto;
+                padding: 30px;
+                max-width: 470px;
+                border-radius: 3px;
+                height:800px;
+            }
+
+            .get-in-touch input[type=text],.get-in-touch input[type=email], .get-in-touch textarea {
+                background: rgb(235, 241, 245);
+                color:#110107;
+            }
+
+            .get-in-touch  input:focus, .get-in-touch  textarea:focus {
+                outline: 0;
+                background: #FFF;
+        </style>
+    </head>
+
+    <body>
+
+
+    <div class="row">
+        <div class="row">
+            <div class="col-mid-4">
+                <form method="post"  action="{{ url_for('save') }}" class="form">
+                    <div class="get-in-touch">
+                        <h3 class="text-center">
+                            Contact us!</h3>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Name" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" required/>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" name="message" placeholder="Message" required></textarea>
+                        </div>
+                         <div class="form-group">
+                            <input type="hidden" class="form-control" name="category" id="category" value="1" required/>
+                        </div>
+                        <input type="submit" value="Submit Form" class="btn btn-success btn-sm btn-block" role="button" />
+                        <br>
+                        <iframe width="100%" height="350" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=sv&amp;geocode=&amp;q=2008+Deerpark+Drive,+Fullerton,+Kalifornien,+USA&amp;aq=0&amp;oq=2008+deer&amp;sll=33.866706,-118.059153&amp;sspn=0.694429,1.352692&amp;ie=UTF8&amp;hq=&amp;hnear=2008+N+Deerpark+Dr,+Fullerton,+Orange+County,+California+92831&amp;t=m&amp;z=14&amp;ll=33.892345,-117.877926&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=sv&amp;geocode=&amp;q=2008+Deerpark+Drive,+Fullerton,+Kalifornien,+USA&amp;aq=0&amp;oq=2008+deer&amp;sll=33.866706,-118.059153&amp;sspn=0.694429,1.352692&amp;ie=UTF8&amp;hq=&amp;hnear=2008+N+Deerpark+Dr,+Fullerton,+Orange+County,+California+92831&amp;t=m&amp;z=14&amp;ll=33.892345,-117.877926" style="color:#0000FF;text-align:left">Show bigger map</a></small>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+{%  endblock %}

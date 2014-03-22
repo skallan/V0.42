@@ -1,0 +1,109 @@
+{%  extends "masterpage.html" %}
+{% set active_page = "add product" %}
+{%  block content %}
+
+    <head xmlns="http://www.w3.org/1999/html">
+        <style>
+            .get-in-touch {
+                position: relative;
+                margin: 0 auto;
+                padding: 30px;
+                max-width: 470px;
+                border-radius: 3px;
+                height:800px;
+            }
+
+            .get-in-touch input[type=text],.get-in-touch input[type=email], .get-in-touch textarea {
+                background: rgb(235, 241, 245);
+                color: #110107;
+            }
+
+            .get-in-touch  input:focus, .get-in-touch  textarea:focus {
+                outline: 0;
+                background: rgba(152, 217, 255, 0);
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+    {% if not session.logged_in %}
+        <script language="javascript">
+            window.location.href = "{{ url_for('login') }}"
+        </script>
+    {% else %}
+
+        <div class="row">
+            <div class="row">
+                <div class="col-mid-4">
+                    <form method="post" action="{{ url_for('saveproduct') }}" class="form" enctype="multipart/form-data">
+                        <div class="get-in-touch">
+                            <h3 class="text-center">
+                                Add a new product</h3>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="product_name" id="product_name" placeholder="Product Name" required/>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="price" id="price" placeholder="Price" required/>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="product_id" id="product_id" placeholder="Art no" required/>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="min_size" id="min_size" placeholder="min_size" required/>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="max_size" id="max_size" placeholder="max_size" required/>
+                            </div>
+
+
+                            <!--9
+                            Katergorier, storlekar, Artikel nummer, märke
+
+                            -->
+                            <div class="form-group">
+                                <select class="form-control" name="category" required>
+                                    <option value="Sko">Skor</option>
+                                    <option value="Kängor">Kängor</option>
+                                    <option value="Stövlar">Stövlar</option>
+                                    <option value="Jacka">Jacka</option>
+                                    <option value="Byxor">Byxor</option>
+                                    <option value="Shorts">Shorts</option>
+                                    <option value="korv">Korv</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="classification" id="classification" placeholder="Classification" required/>
+                            </div>
+
+                            <div class="form-group">
+                                <select class="form-control" name="brand" required>
+                                    <option value="Dunderdon">Dunderdon</option>
+                                    <option value="Solid Gear">Solid Gear</option>
+                                    <option value="Toe Guard">Toe Guard</option>
+                                    <option value="Puma">Puma</option>
+                                    <option value="Super Feet">Super Feet</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" name="info" placeholder="Description" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="file" class="form-control" name="pic_url" id="pic_url" placeholder="picturelink" required/>
+                            </div>
+                            <input type="submit" value="Add product" class="btn btn-success btn-sm btn-block" role="button" />
+                            <br>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    {% endif %}
+    </body>
+
+{%  endblock %}

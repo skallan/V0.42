@@ -1,0 +1,69 @@
+{%  extends "masterpage.html" %}
+{% set active_page = "products" %}
+{%  block content %}
+
+    <head xmlns="http://www.w3.org/1999/html">
+        <Title>Product Details</Title>
+        <style>
+
+
+        </style>
+    </head>
+
+    <body>
+
+    {%  for mess in data %}
+        {% if not session.logged_in %}
+            <script language="javascript">
+                window.location.href = "{{ url_for('login') }}"
+            </script>
+        {% else %}
+            <div class="row">
+            <form method="post" action="{{ url_for('alterproduct') }}" class="form" enctype="multipart/form-data">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="get-in-touch">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="product_name" value="{{ mess[1] }}" required/>
+                        </div>
+
+                        <p class="lead">Short Description</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <figure class="text-center">
+                                <img src="/static/uploads/{{ mess[9] }}" alt="The Amazing Product" class="img-thumbnail" />
+                            </figure>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-md-offset-1">
+                            <p>
+                                Art no: <div class="form-group"> <input type="number" class="form-control" width="40px" name="product_id" value="{{ mess[0] }}" required/> </div>  <br>
+                            Brand: <div class="form-group"><input type="text" class="form-control" width="40px" name="brand" value="{{ mess[5] }}" required/> </div>  <br>
+                            Available in sizes between <div class="form-group"><input type="number" class="form-control" width="40px" name="min_size" value="{{ mess[4] }}" required/> and
+                            <input type="number" class="form-control" width="40px" name="max_size" value="{{ mess[3] }}" required/> </div>
+                            </p>
+                            Classification: <div class="form-group"> <input type="text" class="form-control" name="classification" value="{{ mess[9] }}" required/> </div>
+                            Category: <div class="form-group"> <input type="text" class="form-control" name="category" value="{{ mess[6] }}" required/> </div>
+                            <br><br> Description:
+                            <div class="form-group"> <textarea class="form-control" rows="3" width="40px" name="info" required>{{ mess[7] }}</textarea> </div>
+                        </div>
+                        <h2>Price: <div class="form-group"> <input type="number" class="form-control" name="price" max="200px" width="200px" value="{{ mess[2] }}" required> </div> </h2>
+                        <input type="hidden" class="form-group" name="pic_url" value="{{ mess[8] }}">
+                        <input type="submit" onclick="return confirmation()" value="Save Changes" class="btn btn-success" role="button" />
+                    </div>
+                </div>
+            </form>
+
+
+
+            <form method="post"  action="{{ url_for('remove_product') }}" class="form" enctype="multipart/form-data" >
+                <div class="form-group">
+                    <input type="hidden" readonly class="form-control" name="product_id" value={{ mess[0] }} />
+                </div>
+                <input type="submit" onclick="return confirmation()" value="Remove product" class="btn btn-success" role="button" />
+            </form>
+        {% endif %}
+    </div>
+    {% endfor %}
+    </body>
+{% endblock %}

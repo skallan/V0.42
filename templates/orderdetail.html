@@ -1,0 +1,35 @@
+{%  extends "masterpage.html" %}
+{% block content %}
+{% set active_page = "show" %}
+
+    <head>
+    <style>
+        .container {
+            height: 900px;
+        }
+    </style>
+
+    </head>
+    <body>
+
+    <div class="row">
+    {% if not session.logged_in %}
+       <script language="javascript">
+    window.location.href = "{{ url_for('login') }}"
+</script>
+    {% else %}
+
+    <div class=flash>
+        {{ message }}
+    </div>
+    <h3>List of products in order {%print order_nr%}</h3>
+    {% for order,product in order_details  %}
+    <li>Product id: {{order[1]}} Product name: {{ product[1] }} Size: {{order[2]}}  Quantity: {{order[3]}}
+    <a class="btn btn-success" href="/products/{{ product[1] }}" role="button">View product details &raquo;</a>
+    </li><br>
+    {% endfor %}
+    {% endif %}
+    </div>
+    </body>
+
+{%  endblock %}

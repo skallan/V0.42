@@ -1,0 +1,27 @@
+{%  extends "masterpage.html" %}
+{% block content %}
+{% set active_page = "show" %}
+
+    <body>
+
+    <div class="row">
+    {% if not session.logged_in %}
+       <script language="javascript">
+    window.location.href = "{{ url_for('login') }}"
+</script>
+    {% else %}
+
+    <div class=flash>
+        {{ message }}
+    </div>
+    <h3>Products in order nr List of orders for {{ session.username }}</h3>
+    {% for x in order_list %}
+    <li>Order nr id: {{ x[0] }} Date placed:  {{ x[2] }}
+    <a class="btn btn-success" href="/orders/{{ x[0] }}" role="button">View order details &raquo;</a>
+    </li><br>
+    {% endfor %}
+    {% endif %}
+    </div>
+    </body>
+
+{%  endblock %}

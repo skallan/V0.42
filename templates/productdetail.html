@@ -1,0 +1,135 @@
+{%  extends "masterpage.html" %}
+{% set active_page = "products" %}
+{%  block content %}
+
+    <head>
+        <Title>Product Details</Title>
+        <style>
+            .container{
+                height:1000px;
+            }
+            .get-in-touch-submit {
+                position: relative;
+                margin: 0 auto;
+                max-width: 150px;
+                border-radius: 3px;
+            }
+            .form-group{
+                padding-left: 79px;
+                position: relative;
+                border-radius: 3px;
+            }
+            .get-in-touch-name {
+                position: relative;
+                margin: 0 auto;
+                max-width: 150px;
+                border-radius: 3px;
+            }
+
+            .comment_container{
+                height:40px;
+                padding-left: 112px;
+                width: 100%;
+                border-radius: 3px;
+            }
+            .review{
+                border-top: solid 1px #010101;
+                padding-top: 20px;
+            }
+            .row-top{
+                padding-left: 130px;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+
+    {%  for mess in data %}
+        <div class="row-top">
+            <h1>{{ mess[1] }}</h1>
+            <p class="lead">{{ mess[7] }}</p>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="text-center">
+
+
+                    <img src="/static/uploads/{{ mess[9] }}" alt="The Amazing Product" class="img-thumbnail" />
+                </div>
+                {% if session.logged_in %}
+                    <br>
+                    <form method="post"  action="{{ url_for('remove_product') }}" class="text-center form" enctype="multipart/form-data">
+
+                        <input type="hidden" readonly class="form-control" name="product_id" value={{ mess[0] }} />
+                        <input type="submit" onclick="return confirmation()" value="Remove product" class="btn btn-danger" role="button"/>
+                        <a class="btn btn-success" href="/alter/{{ mess[1] }}">Edit product</a>
+                    </form>
+
+                {% endif %}
+            </div>
+
+            <div class="col-md-offset-6" >
+                <p>Art no: {{ mess[0] }}  </p>
+                <p>Brand: {{ mess[5] }}   </p>
+                <p>Available in sizes between {{ mess[4] }}  and {{ mess[3] }}</p>
+                Classification: {{ mess[6] }}
+                <h3>Price: {{ mess[2] }}:-</h3>
+
+                <form method="post" action="{{ url_for('add_to_cart') }}" class="form">
+                    <dl>
+                        <dt><h4>Size:</h4>
+                        <select style="width: 30%" class="form-control" name="size" required>
+                            {% for x in sizes %}
+                                <option value="{{ x }}">{{ x }}</option>
+                            {% endfor %}
+                        </select>
+                        <dt><h4>Quantity:</h4>
+                        <input style="width: 30%" type="number" class="form-control"  name="quantity" required/>
+                    </dl>
+                    <button type="submit" class="btn btn-success" href="/cart" name="button" role="button" value={{ mess[0] }}>Add to cart</button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="review">
+                <div class="col-xs-12 col-md-4">
+                    <div class="form-group">
+                        <h3>Review the product</h3>
+                    </div>
+                    <form method="post"  action="{{ url_for('save') }}" class="form">
+                        <div class="get-in-touch-name">
+                            <input type="text" readonly class="form-control" name="name" value="{{ session.username }}" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" readonly class="form-control" name="email"  value=" " required/>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" name="message" value="Message" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" readonly class="form-control" name="category" value={{ mess[0] }} required/>
+                        </div>
+                        <div class="get-in-touch-submit">
+                            <input type="submit" value="Submit Form" class="btn btn-success btn-sm btn-block" role="button" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    <hr />
+    {%  for comment in comments %}
+        <div class="comment_container">
+            <h5>{{ session.username }} Wrote:
+                <br>
+                {{ comment[2] }}
+                <br></h5>
+        </div>
+    {% endfor %}
+    </body>
+
+{%  endblock %}

@@ -1,0 +1,12 @@
+{% extends "masterpage.html" %}
+{% set active_page = "show" %}
+{% block content %}
+    <a href="./">Go back to Index</a>
+    <br>
+    <h2>Messages</h2>
+    {%  for mess in data %}
+        <b>{{ mess[1] }}</b> wrote: {{ mess[2] }}<br/>
+        <br> to contact him Email {{ mess[3] }} <br>
+    {% endfor %}
+{% endblock %}
+

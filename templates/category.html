@@ -1,0 +1,28 @@
+{%  extends "masterpage.html" %}
+{% set active_page = "category" %}
+{%  block content %}
+
+    <body>
+    <div class='row'>
+        <script> var a=0;</script>
+        {%  for mess in data %}
+            <script>
+                if (a%4==0 ) {
+                    document.write("</div><div class='row'>")
+                }
+                a++;
+            </script>
+            <div class="col-md-3">
+                <a href="/products/{{ mess[1] }}"> <img src="/static/uploads/{{ mess[9] }}" width="280px" height="187px" ></a>
+                <h2>{{ mess[1] }}</h2>
+                <p>{{ mess[7] }}</p>
+                <p>
+                    <a class="btn btn-default" href="/Products/{{ mess[1] }}" role="button">View details &raquo;</a>
+                    <a class="btn btn-success" href="#" role="button">Add to cart</a>
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+    </body>
+
+{%  endblock %}

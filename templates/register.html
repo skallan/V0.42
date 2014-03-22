@@ -1,0 +1,51 @@
+{% extends "masterpage.html" %}
+{% set active_page = "index" %}
+{%  block content %}
+
+    <head xmlns="http://www.w3.org/1999/html">
+        <style>
+            .get-in-touch {
+                position: relative;
+                margin: 0 auto;
+                padding: 30px;
+                max-width: 470px;
+                border-radius: 3px;
+                height:800px;
+            }
+            .get-in-touch input[type=text],.get-in-touch input[type=email], .get-in-touch textarea {
+                background: rgb(235, 241, 245);
+                color:#e5e5e5;
+            }
+            .get-in-touch  input:focus, .get-in-touch  textarea:focus {
+                outline: 0;
+                background: #FFF;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class=flash>
+            {{ error }}
+        </div>
+        <div class=flash>
+            {{ message }}
+        </div>
+    <form action="{{ url_for('register') }}" method=post>
+        <dl>
+            <dt>Register here
+            <dt>Username:
+            <dd><input type=text name=username>
+            <dt>Password:
+            <dd><input type=password name=password>
+            <dt>Confirm Password:
+            <dd><input type=password name=confirmed_password>
+            <dt>Firstname:
+            <dd><input type=text name=firstname>
+            <dt>Lastname:
+            <dd><input type=text name=lastname>
+            <dd><input type=submit value=Register>
+        </dl>
+    </form>
+    </body>
+
+{%  endblock %}

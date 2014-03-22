@@ -186,22 +186,25 @@ def get_offer_products():
 
 
 def set_admin(name):
-    """
-    Allows a Admin to change a normal members Authority to a Admin level.
-
-    :param name: The name of the user to be promoted.
-    """
     c = get_db()
     cursor = c.cursor()
     cursor.execute('SELECT Authority from user where Username = ?', [name])
     result = cursor.fetchone()
-    if check_username(name)==False or int(result[0])==2:
-        return False
-    else:
+    if not check_username(name) or int(result[0] == 3):
+        message=name+" already have authority 3"
+        return message
+    elif int(result[0]) == 2:
+        s = "UPDATE user SET Authority=3 WHERE Username='"+name+"'"
+        c.execute(s)
+        c.commit()
+        message=name+" was promoted to authority 3"
+        return message
+    elif int(result[0] == 1):
         s="UPDATE user SET Authority=2 WHERE Username='"+name+"'"
         c.execute(s)
         c.commit()
-    return True
+        message=name+" was promoted to authority 2"
+        return message
 
 
 def get_all_users():

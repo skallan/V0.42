@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6dff1995-ea63-4dd4-bffa-e9fb64b65eb8" name="Default" comment="" />
-    <ignored path="V0.42.iws" />
+    <list default="true" id="1e0905bc-994b-424d-8b1b-13c2482cdf1e" name="Default" comment="" />
+    <ignored path="V0.2.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,21 +11,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/V0.2$V0_2.coverage" NAME="V0.2 Coverage Results" MODIFIED="1395461828032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="V0.42" />
+    <favorites_list name="V0.2" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="V0.42.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/V0.42.py">
+      <file leaf-file-name="productdetail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/productdetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="30" selection-start="3178" selection-end="3178" vertical-scroll-proportion="0.7041096" vertical-offset="1477" max-vertical-offset="10149">
+            <state line="97" column="0" selection-start="3454" selection-end="3454" vertical-scroll-proportion="-0.0" vertical-offset="1649" max-vertical-offset="2397">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="21" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -34,40 +47,49 @@
       <file leaf-file-name="db.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="317" column="11" selection-start="10922" selection-end="10922" vertical-scroll-proportion="0.0" vertical-offset="4893" max-vertical-offset="5474">
+            <state line="333" column="11" selection-start="10980" selection-end="10980" vertical-scroll-proportion="-18.96" vertical-offset="5170" max-vertical-offset="5746">
               <folding>
-                <marker date="1395452006910" expanded="true" signature="1079:1108" placeholder="drop table i..." />
-                <marker date="1395452006910" expanded="true" signature="1127:1155" placeholder="drop table i..." />
-                <marker date="1395452006910" expanded="true" signature="1174:1256" placeholder="create table..messages..." />
-                <marker date="1395452006910" expanded="true" signature="1275:1468" placeholder="create table..product..." />
-                <marker date="1395452006910" expanded="true" signature="2075:2151" placeholder="insert into ..." />
-                <marker date="1395452006910" expanded="true" signature="2342:2395" placeholder="SELECT Produ..product..." />
-                <marker date="1395452006910" expanded="true" signature="2909:2953" placeholder="SELECT Passw..user..." />
-                <marker date="1395452006910" expanded="true" signature="3247:3291" placeholder="UPDATE user ..." />
-                <marker date="1395452006910" expanded="true" signature="3632:3697" placeholder="insert into ..." />
-                <marker date="1395452006910" expanded="true" signature="4791:4939" placeholder="insert into ..." />
-                <marker date="1395452006910" expanded="true" signature="5348:5394" placeholder="insert into ..." />
-                <marker date="1395452006910" expanded="true" signature="5715:5756" placeholder="SELECT * fro..messages..." />
-                <marker date="1395452006910" expanded="true" signature="6052:6073" placeholder="select * fro..Product..." />
-                <marker date="1395452006910" expanded="true" signature="6188:6242" placeholder="select * fro..Product..." />
-                <marker date="1395452006910" expanded="true" signature="6357:6398" placeholder="select * fro..offer..." />
-                <marker date="1395452006910" expanded="true" signature="6673:6718" placeholder="SELECT Autho..user..." />
-                <marker date="1395452006910" expanded="true" signature="6859:6912" placeholder="UPDATE user ..." />
-                <marker date="1395452006910" expanded="true" signature="7181:7199" placeholder="SELECT * fro..user..." />
-                <marker date="1395452006910" expanded="true" signature="7519:7561" placeholder="DELETE FROM ..." />
-                <marker date="1395452006910" expanded="true" signature="7949:7993" placeholder="SELECT usern..user..." />
-                <marker date="1395452006910" expanded="true" signature="8515:8560" placeholder="select * fro..product..." />
-                <marker date="1395452006910" expanded="true" signature="8763:8798" placeholder="select * fro..user..." />
-                <marker date="1395452006910" expanded="true" signature="8943:8986" placeholder="select autho..user..." />
-                <marker date="1395452006910" expanded="true" signature="9232:9376" placeholder="UPDATE produ..." />
-                <marker date="1395452006910" expanded="true" signature="9599:9676" placeholder="insert into ..." />
-                <marker date="1395452006910" expanded="true" signature="9760:9786" placeholder="SELECT last_..." />
-                <marker date="1395452006910" expanded="true" signature="9871:9959" placeholder="insert into ..." />
-                <marker date="1395452006910" expanded="true" signature="10218:10259" placeholder="select user_..user..." />
-                <marker date="1395452006910" expanded="true" signature="10412:10452" placeholder="delete FROM ..." />
-                <marker date="1395452006910" expanded="true" signature="10577:10622" placeholder="SELECT * fro..orderregister..." />
-                <marker date="1395452006910" expanded="true" signature="10761:10818" placeholder="SELECT * fro..order_product_occurrance..." />
+                <marker date="1395519261149" expanded="true" signature="1086:1115" placeholder="drop table i..." />
+                <marker date="1395519261149" expanded="true" signature="1134:1162" placeholder="drop table i..." />
+                <marker date="1395519261149" expanded="true" signature="1181:1263" placeholder="create table..messages..." />
+                <marker date="1395519261149" expanded="true" signature="1282:1475" placeholder="create table..product..." />
+                <marker date="1395519261149" expanded="true" signature="2082:2158" placeholder="insert into ..." />
+                <marker date="1395519261149" expanded="true" signature="2333:2386" placeholder="SELECT Produ..product..." />
+                <marker date="1395519261149" expanded="true" signature="2901:2945" placeholder="SELECT Passw..user..." />
+                <marker date="1395519261149" expanded="true" signature="3240:3284" placeholder="UPDATE user ..." />
+                <marker date="1395519261149" expanded="true" signature="3626:3691" placeholder="insert into ..." />
+                <marker date="1395519261149" expanded="true" signature="4786:4934" placeholder="insert into ..." />
+                <marker date="1395519261149" expanded="true" signature="5343:5389" placeholder="insert into ..." />
+                <marker date="1395519261149" expanded="true" signature="5710:5751" placeholder="SELECT * fro..messages..." />
+                <marker date="1395519261149" expanded="true" signature="6048:6069" placeholder="select * fro..Product..." />
+                <marker date="1395519261149" expanded="true" signature="6185:6239" placeholder="select * fro..Product..." />
+                <marker date="1395519261149" expanded="true" signature="6355:6396" placeholder="select * fro..offer..." />
+                <marker date="1395519261149" expanded="true" signature="6672:6717" placeholder="SELECT Autho..user..." />
+                <marker date="1395519261149" expanded="true" signature="6858:6911" placeholder="UPDATE user ..." />
+                <marker date="1395519261149" expanded="true" signature="7181:7199" placeholder="SELECT * fro..user..." />
+                <marker date="1395519261149" expanded="true" signature="7520:7562" placeholder="DELETE FROM ..." />
+                <marker date="1395519261149" expanded="true" signature="7951:7995" placeholder="SELECT usern..user..." />
+                <marker date="1395519261149" expanded="true" signature="8517:8562" placeholder="select * fro..product..." />
+                <marker date="1395519261149" expanded="true" signature="8772:8815" placeholder="select autho..user..." />
+                <marker date="1395519261149" expanded="true" signature="9055:9199" placeholder="UPDATE produ..." />
+                <marker date="1395519261149" expanded="true" signature="9406:9482" placeholder="insert into ..." />
+                <marker date="1395519261149" expanded="true" signature="9557:9583" placeholder="SELECT last_..." />
+                <marker date="1395519261149" expanded="true" signature="9668:9772" placeholder="insert into ..." />
+                <marker date="1395519261149" expanded="true" signature="9978:10013" placeholder="select * fro..user..." />
+                <marker date="1395519261149" expanded="true" signature="10275:10316" placeholder="select user_..user..." />
+                <marker date="1395519261149" expanded="true" signature="10470:10510" placeholder="delete FROM ..." />
+                <marker date="1395519261149" expanded="true" signature="10635:10680" placeholder="SELECT * fro..orderregister..." />
+                <marker date="1395519261149" expanded="true" signature="10819:10876" placeholder="SELECT * fro..order_product_occurrance..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/category.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="23" selection-start="234" selection-end="234" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="561">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,7 +97,52 @@
       <file leaf-file-name="masterpage.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/masterpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="31" selection-start="2762" selection-end="2762" vertical-scroll-proportion="-9.461538" vertical-offset="842" max-vertical-offset="2125">
+            <state line="125" column="18" selection-start="5221" selection-end="5221" vertical-scroll-proportion="-16.23077" vertical-offset="1703" max-vertical-offset="2278">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="V0.42.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/V0.42.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1680" max-vertical-offset="10149">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="V0.4.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/V0.4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="224" selection-end="224" vertical-scroll-proportion="0.08793104" vertical-offset="0" max-vertical-offset="10149">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orderdetail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/orderdetail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="14" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/cart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="43" selection-start="2669" selection-end="2669" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1649">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_product.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/add_product.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="49" selection-start="3458" selection-end="3458" vertical-scroll-proportion="-50.346153" vertical-offset="0" max-vertical-offset="1938">
               <folding />
             </state>
           </provider>
@@ -91,17 +158,60 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/templates/TungDesign.html" />
+        <option value="$PROJECT_DIR$/add_product.html" />
+        <option value="$PROJECT_DIR$/Show_Products.html" />
+        <option value="$PROJECT_DIR$/../../V0.23.py" />
+        <option value="$PROJECT_DIR$/V0.2.py" />
+        <option value="$PROJECT_DIR$/register.html" />
+        <option value="$PROJECT_DIR$/Category.html" />
+        <option value="db-console:/ce8793e9/9be20f6c-a0b5-4967-aeaa-a0c94efab8f3/" />
+        <option value="$PROJECT_DIR$/templates/Testindex.html" />
+        <option value="$PROJECT_DIR$/V0.24.py" />
+        <option value="$PROJECT_DIR$/templates/About.html" />
+        <option value="$PROJECT_DIR$/templates/Category.html" />
+        <option value="$PROJECT_DIR$/templates/Products.html" />
+        <option value="$PROJECT_DIR$/templates/Testproducts.html" />
+        <option value="$PROJECT_DIR$/templates/Login.html" />
+        <option value="$PROJECT_DIR$/templates/Contact.html" />
+        <option value="$PROJECT_DIR$/templates/Show.html" />
+        <option value="$PROJECT_DIR$/templates/Show_Products.html" />
+        <option value="$PROJECT_DIR$/V0.26.py" />
+        <option value="dbtable:/ce8793e9/efac8c57-2928-4801-9465-b35701eeb864/..product" />
+        <option value="$PROJECT_DIR$/alter.html" />
+        <option value="$PROJECT_DIR$/templates/register.html" />
+        <option value="$PROJECT_DIR$/v0.26.py" />
+        <option value="$PROJECT_DIR$/add_offer.html" />
+        <option value="db-console:/baf5df03/efac8c57-2928-4801-9465-b35701eeb864/" />
+        <option value="$PROJECT_DIR$/templates/show.html" />
+        <option value="$PROJECT_DIR$/templates/products.html" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/templates/about.html" />
+        <option value="$PROJECT_DIR$/templates/contact.html" />
+        <option value="$PROJECT_DIR$/templates/admin_users.html" />
+        <option value="$PROJECT_DIR$/templates/add_offer.html" />
+        <option value="$PROJECT_DIR$/templates/alter.html" />
+        <option value="$PROJECT_DIR$/templates/remove_product.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/templates/orders.html" />
+        <option value="$PROJECT_DIR$/templates/orderdetail.html" />
+        <option value="$PROJECT_DIR$/v0.3.py" />
+        <option value="$PROJECT_DIR$/templates/cart.html" />
+        <option value="$PROJECT_DIR$/templates/productdetail.html" />
+        <option value="$PROJECT_DIR$/templates/add_product.html" />
+        <option value="$PROJECT_DIR$/V0.4.py" />
         <option value="$PROJECT_DIR$/db.py" />
+        <option value="$PROJECT_DIR$/templates/category.html" />
         <option value="$PROJECT_DIR$/templates/masterpage.html" />
-        <option value="$PROJECT_DIR$/V0.42.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1364" />
-    <option name="height" value="726" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -133,13 +243,31 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="V0.42" />
+              <option name="myItemId" value="V0.2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="V0.42" />
+              <option name="myItemId" value="V0.2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 2.7.6 (C:/Python27/python.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="V0.2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -149,7 +277,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="V0.42" />
+              <option name="myItemId" value="V0.2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -167,51 +295,304 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="recentsLimit" value="5" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../V0.3" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="SearchEverywhereHistory" value="&#10;navbar" />
+    <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Joel\PycharmProjects\V0.2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Joel\PycharmProjects\V0.2\templates" />
+      <recent name="C:\Users\Joel\PycharmProjects\V0.2\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.V0.2">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="V0.2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="V0.2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="V0.2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="V0.2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="V0.2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="V0.2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="V0.2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="false" name="V0.2" type="PythonConfigurationType" factoryName="Python" singleton="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="V0.2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/V0.4.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.V0.2" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6dff1995-ea63-4dd4-bffa-e9fb64b65eb8" name="Default" comment="" />
-      <created>1395450984961</created>
-      <updated>1395450984961</updated>
+      <changelist id="1e0905bc-994b-424d-8b1b-13c2482cdf1e" name="Default" comment="" />
+      <created>1392593415228</created>
+      <updated>1392593415228</updated>
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1364" height="726" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3260188" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15454546" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24961714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29242423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2908497" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33543307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32615715" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3260188" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718122" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25364584" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2908497" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2890625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24865447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -227,58 +608,440 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/productdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="0" selection-start="3350" selection-end="3350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="317" column="11" selection-start="10922" selection-end="10922" vertical-scroll-proportion="0.0" vertical-offset="4893" max-vertical-offset="5474">
+        <state line="270" column="28" selection-start="9045" selection-end="9045" vertical-scroll-proportion="0.0" vertical-offset="4590" max-vertical-offset="5491">
           <folding>
-            <marker date="1395452006910" expanded="true" signature="1079:1108" placeholder="drop table i..." />
-            <marker date="1395452006910" expanded="true" signature="1127:1155" placeholder="drop table i..." />
-            <marker date="1395452006910" expanded="true" signature="1174:1256" placeholder="create table..messages..." />
-            <marker date="1395452006910" expanded="true" signature="1275:1468" placeholder="create table..product..." />
-            <marker date="1395452006910" expanded="true" signature="2075:2151" placeholder="insert into ..." />
-            <marker date="1395452006910" expanded="true" signature="2342:2395" placeholder="SELECT Produ..product..." />
-            <marker date="1395452006910" expanded="true" signature="2909:2953" placeholder="SELECT Passw..user..." />
-            <marker date="1395452006910" expanded="true" signature="3247:3291" placeholder="UPDATE user ..." />
-            <marker date="1395452006910" expanded="true" signature="3632:3697" placeholder="insert into ..." />
-            <marker date="1395452006910" expanded="true" signature="4791:4939" placeholder="insert into ..." />
-            <marker date="1395452006910" expanded="true" signature="5348:5394" placeholder="insert into ..." />
-            <marker date="1395452006910" expanded="true" signature="5715:5756" placeholder="SELECT * fro..messages..." />
-            <marker date="1395452006910" expanded="true" signature="6052:6073" placeholder="select * fro..Product..." />
-            <marker date="1395452006910" expanded="true" signature="6188:6242" placeholder="select * fro..Product..." />
-            <marker date="1395452006910" expanded="true" signature="6357:6398" placeholder="select * fro..offer..." />
-            <marker date="1395452006910" expanded="true" signature="6673:6718" placeholder="SELECT Autho..user..." />
-            <marker date="1395452006910" expanded="true" signature="6859:6912" placeholder="UPDATE user ..." />
-            <marker date="1395452006910" expanded="true" signature="7181:7199" placeholder="SELECT * fro..user..." />
-            <marker date="1395452006910" expanded="true" signature="7519:7561" placeholder="DELETE FROM ..." />
-            <marker date="1395452006910" expanded="true" signature="7949:7993" placeholder="SELECT usern..user..." />
-            <marker date="1395452006910" expanded="true" signature="8515:8560" placeholder="select * fro..product..." />
-            <marker date="1395452006910" expanded="true" signature="8763:8798" placeholder="select * fro..user..." />
-            <marker date="1395452006910" expanded="true" signature="8943:8986" placeholder="select autho..user..." />
-            <marker date="1395452006910" expanded="true" signature="9232:9376" placeholder="UPDATE produ..." />
-            <marker date="1395452006910" expanded="true" signature="9599:9676" placeholder="insert into ..." />
-            <marker date="1395452006910" expanded="true" signature="9760:9786" placeholder="SELECT last_..." />
-            <marker date="1395452006910" expanded="true" signature="9871:9959" placeholder="insert into ..." />
-            <marker date="1395452006910" expanded="true" signature="10218:10259" placeholder="select user_..user..." />
-            <marker date="1395452006910" expanded="true" signature="10412:10452" placeholder="delete FROM ..." />
-            <marker date="1395452006910" expanded="true" signature="10577:10622" placeholder="SELECT * fro..orderregister..." />
-            <marker date="1395452006910" expanded="true" signature="10761:10818" placeholder="SELECT * fro..order_product_occurrance..." />
+            <marker date="1395519261149" expanded="true" signature="1086:1115" placeholder="drop table i..." />
+            <marker date="1395519261149" expanded="true" signature="1134:1162" placeholder="drop table i..." />
+            <marker date="1395519261149" expanded="true" signature="1181:1263" placeholder="create table..messages..." />
+            <marker date="1395519261149" expanded="true" signature="1282:1475" placeholder="create table..product..." />
+            <marker date="1395519261149" expanded="true" signature="2082:2158" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="2333:2386" placeholder="SELECT Produ..product..." />
+            <marker date="1395519261149" expanded="true" signature="2901:2945" placeholder="SELECT Passw..user..." />
+            <marker date="1395519261149" expanded="true" signature="3240:3284" placeholder="UPDATE user ..." />
+            <marker date="1395519261149" expanded="true" signature="3626:3691" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="4786:4934" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="5343:5389" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="5710:5751" placeholder="SELECT * fro..messages..." />
+            <marker date="1395519261149" expanded="true" signature="6048:6069" placeholder="select * fro..Product..." />
+            <marker date="1395519261149" expanded="true" signature="6185:6239" placeholder="select * fro..Product..." />
+            <marker date="1395519261149" expanded="true" signature="6355:6396" placeholder="select * fro..offer..." />
+            <marker date="1395519261149" expanded="true" signature="6672:6717" placeholder="SELECT Autho..user..." />
+            <marker date="1395519261149" expanded="true" signature="6858:6911" placeholder="UPDATE user ..." />
+            <marker date="1395519261149" expanded="true" signature="7181:7199" placeholder="SELECT * fro..user..." />
+            <marker date="1395519261149" expanded="true" signature="7520:7562" placeholder="DELETE FROM ..." />
+            <marker date="1395519261149" expanded="true" signature="7951:7995" placeholder="SELECT usern..user..." />
+            <marker date="1395519261149" expanded="true" signature="8517:8562" placeholder="select * fro..product..." />
+            <marker date="1395519261149" expanded="true" signature="8772:8815" placeholder="select autho..user..." />
+            <marker date="1395519261149" expanded="true" signature="9055:9199" placeholder="UPDATE produ..." />
+            <marker date="1395519261149" expanded="true" signature="9406:9482" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="9557:9583" placeholder="SELECT last_..." />
+            <marker date="1395519261149" expanded="true" signature="9668:9772" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="9978:10013" placeholder="select * fro..user..." />
+            <marker date="1395519261149" expanded="true" signature="10275:10316" placeholder="select user_..user..." />
+            <marker date="1395519261149" expanded="true" signature="10470:10510" placeholder="delete FROM ..." />
+            <marker date="1395519261149" expanded="true" signature="10635:10680" placeholder="SELECT * fro..orderregister..." />
+            <marker date="1395519261149" expanded="true" signature="10819:10876" placeholder="SELECT * fro..order_product_occurrance..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orderdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="14" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="43" selection-start="2669" selection-end="2669" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1649">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="49" selection-start="3458" selection-end="3458" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/productdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="0" selection-start="5061" selection-end="5061" vertical-scroll-proportion="0.0" vertical-offset="1496" max-vertical-offset="2380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orders.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="29" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="544" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="277" column="11" selection-start="9778" selection-end="9778" vertical-scroll-proportion="0.0" vertical-offset="4709" max-vertical-offset="5236">
+          <folding>
+            <marker date="1395519261149" expanded="true" signature="1086:1115" placeholder="drop table i..." />
+            <marker date="1395519261149" expanded="true" signature="1134:1162" placeholder="drop table i..." />
+            <marker date="1395519261149" expanded="true" signature="1181:1263" placeholder="create table..messages..." />
+            <marker date="1395519261149" expanded="true" signature="1282:1475" placeholder="create table..product..." />
+            <marker date="1395519261149" expanded="true" signature="2082:2158" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="2333:2386" placeholder="SELECT Produ..product..." />
+            <marker date="1395519261149" expanded="true" signature="2901:2945" placeholder="SELECT Passw..user..." />
+            <marker date="1395519261149" expanded="true" signature="3240:3284" placeholder="UPDATE user ..." />
+            <marker date="1395519261149" expanded="true" signature="3626:3691" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="4786:4934" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="5343:5389" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="5710:5751" placeholder="SELECT * fro..messages..." />
+            <marker date="1395519261149" expanded="true" signature="6048:6069" placeholder="select * fro..Product..." />
+            <marker date="1395519261149" expanded="true" signature="6185:6239" placeholder="select * fro..Product..." />
+            <marker date="1395519261149" expanded="true" signature="6355:6396" placeholder="select * fro..offer..." />
+            <marker date="1395519261149" expanded="true" signature="6672:6717" placeholder="SELECT Autho..user..." />
+            <marker date="1395519261149" expanded="true" signature="6858:6911" placeholder="UPDATE user ..." />
+            <marker date="1395519261149" expanded="true" signature="7181:7199" placeholder="SELECT * fro..user..." />
+            <marker date="1395519261149" expanded="true" signature="7520:7562" placeholder="DELETE FROM ..." />
+            <marker date="1395519261149" expanded="true" signature="7951:7995" placeholder="SELECT usern..user..." />
+            <marker date="1395519261149" expanded="true" signature="8517:8562" placeholder="select * fro..product..." />
+            <marker date="1395519261149" expanded="true" signature="8772:8815" placeholder="select autho..user..." />
+            <marker date="1395519261149" expanded="true" signature="9055:9199" placeholder="UPDATE produ..." />
+            <marker date="1395519261149" expanded="true" signature="9406:9482" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="9557:9583" placeholder="SELECT last_..." />
+            <marker date="1395519261149" expanded="true" signature="9668:9772" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="9978:10013" placeholder="select * fro..user..." />
+            <marker date="1395519261149" expanded="true" signature="10275:10316" placeholder="select user_..user..." />
+            <marker date="1395519261149" expanded="true" signature="10470:10510" placeholder="delete FROM ..." />
+            <marker date="1395519261149" expanded="true" signature="10635:10680" placeholder="SELECT * fro..orderregister..." />
+            <marker date="1395519261149" expanded="true" signature="10819:10876" placeholder="SELECT * fro..order_product_occurrance..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orderdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="14" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_offer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="838" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="0" selection-start="1762" selection-end="1762" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="43" selection-start="2669" selection-end="2669" vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1649">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orders.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="29" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="544" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orderdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="29" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="277" column="11" selection-start="9804" selection-end="9804" vertical-scroll-proportion="0.0" vertical-offset="4709" max-vertical-offset="5236">
+          <folding>
+            <marker date="1395519261149" expanded="true" signature="1086:1115" placeholder="drop table i..." />
+            <marker date="1395519261149" expanded="true" signature="1134:1162" placeholder="drop table i..." />
+            <marker date="1395519261149" expanded="true" signature="1181:1263" placeholder="create table..messages..." />
+            <marker date="1395519261149" expanded="true" signature="1282:1475" placeholder="create table..product..." />
+            <marker date="1395519261149" expanded="true" signature="2082:2158" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="2333:2386" placeholder="SELECT Produ..product..." />
+            <marker date="1395519261149" expanded="true" signature="2901:2945" placeholder="SELECT Passw..user..." />
+            <marker date="1395519261149" expanded="true" signature="3240:3284" placeholder="UPDATE user ..." />
+            <marker date="1395519261149" expanded="true" signature="3626:3691" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="4786:4934" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="5343:5389" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="5710:5751" placeholder="SELECT * fro..messages..." />
+            <marker date="1395519261149" expanded="true" signature="6048:6069" placeholder="select * fro..Product..." />
+            <marker date="1395519261149" expanded="true" signature="6185:6239" placeholder="select * fro..Product..." />
+            <marker date="1395519261149" expanded="true" signature="6355:6396" placeholder="select * fro..offer..." />
+            <marker date="1395519261149" expanded="true" signature="6672:6717" placeholder="SELECT Autho..user..." />
+            <marker date="1395519261149" expanded="true" signature="6858:6911" placeholder="UPDATE user ..." />
+            <marker date="1395519261149" expanded="true" signature="7181:7199" placeholder="SELECT * fro..user..." />
+            <marker date="1395519261149" expanded="true" signature="7520:7562" placeholder="DELETE FROM ..." />
+            <marker date="1395519261149" expanded="true" signature="7951:7995" placeholder="SELECT usern..user..." />
+            <marker date="1395519261149" expanded="true" signature="8517:8562" placeholder="select * fro..product..." />
+            <marker date="1395519261149" expanded="true" signature="8772:8815" placeholder="select autho..user..." />
+            <marker date="1395519261149" expanded="true" signature="9055:9199" placeholder="UPDATE produ..." />
+            <marker date="1395519261149" expanded="true" signature="9406:9482" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="9557:9583" placeholder="SELECT last_..." />
+            <marker date="1395519261149" expanded="true" signature="9668:9772" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="9978:10013" placeholder="select * fro..user..." />
+            <marker date="1395519261149" expanded="true" signature="10275:10316" placeholder="select user_..user..." />
+            <marker date="1395519261149" expanded="true" signature="10470:10510" placeholder="delete FROM ..." />
+            <marker date="1395519261149" expanded="true" signature="10635:10680" placeholder="SELECT * fro..orderregister..." />
+            <marker date="1395519261149" expanded="true" signature="10819:10876" placeholder="SELECT * fro..order_product_occurrance..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_offer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="838" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="16" selection-start="1485" selection-end="1491" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="28" selection-start="2023" selection-end="2023" vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="1394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="271" column="110" selection-start="9561" selection-end="9561" vertical-scroll-proportion="0.0" vertical-offset="4065" max-vertical-offset="4425">
+          <folding>
+            <marker date="1395519261149" expanded="true" signature="1086:1115" placeholder="drop table i..." />
+            <marker date="1395519261149" expanded="true" signature="1134:1162" placeholder="drop table i..." />
+            <marker date="1395519261149" expanded="true" signature="1181:1263" placeholder="create table..messages..." />
+            <marker date="1395519261149" expanded="true" signature="1282:1475" placeholder="create table..product..." />
+            <marker date="1395519261149" expanded="true" signature="2082:2158" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="2333:2386" placeholder="SELECT Produ..product..." />
+            <marker date="1395519261149" expanded="true" signature="2901:2945" placeholder="SELECT Passw..user..." />
+            <marker date="1395519261149" expanded="true" signature="3240:3284" placeholder="UPDATE user ..." />
+            <marker date="1395519261149" expanded="true" signature="3626:3691" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="4786:4934" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="5343:5389" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="5710:5751" placeholder="SELECT * fro..messages..." />
+            <marker date="1395519261149" expanded="true" signature="6048:6069" placeholder="select * fro..Product..." />
+            <marker date="1395519261149" expanded="true" signature="6185:6239" placeholder="select * fro..Product..." />
+            <marker date="1395519261149" expanded="true" signature="6355:6396" placeholder="select * fro..offer..." />
+            <marker date="1395519261149" expanded="true" signature="6672:6717" placeholder="SELECT Autho..user..." />
+            <marker date="1395519261149" expanded="true" signature="6858:6911" placeholder="UPDATE user ..." />
+            <marker date="1395519261149" expanded="true" signature="7181:7199" placeholder="SELECT * fro..user..." />
+            <marker date="1395519261149" expanded="true" signature="7520:7562" placeholder="DELETE FROM ..." />
+            <marker date="1395519261149" expanded="true" signature="7951:7995" placeholder="SELECT usern..user..." />
+            <marker date="1395519261149" expanded="true" signature="8517:8562" placeholder="select * fro..product..." />
+            <marker date="1395519261149" expanded="true" signature="8772:8815" placeholder="select autho..user..." />
+            <marker date="1395519261149" expanded="true" signature="9055:9199" placeholder="UPDATE produ..." />
+            <marker date="1395519261149" expanded="true" signature="9406:9482" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="9557:9583" placeholder="SELECT last_..." />
+            <marker date="1395519261149" expanded="true" signature="9668:9772" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="9978:10013" placeholder="select * fro..user..." />
+            <marker date="1395519261149" expanded="true" signature="10275:10316" placeholder="select user_..user..." />
+            <marker date="1395519261149" expanded="true" signature="10470:10510" placeholder="delete FROM ..." />
+            <marker date="1395519261149" expanded="true" signature="10635:10680" placeholder="SELECT * fro..orderregister..." />
+            <marker date="1395519261149" expanded="true" signature="10819:10876" placeholder="SELECT * fro..order_product_occurrance..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_offer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="838" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1035" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="16" selection-start="1485" selection-end="1491" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="975" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4065" column="21" selection-start="80787" selection-end="80787" vertical-scroll-proportion="0.0" vertical-offset="60646" max-vertical-offset="88425" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="28" selection-start="2023" selection-end="2023" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="513" column="23" selection-start="11764" selection-end="11764" vertical-scroll-proportion="0.33333334" vertical-offset="8592" max-vertical-offset="10132" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_offer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="838" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1035" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4065" column="21" selection-start="80787" selection-end="80787" vertical-scroll-proportion="0.3704955" vertical-offset="60646" max-vertical-offset="88425" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orders.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="29" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="544" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="0" selection-start="1762" selection-end="1762" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="43" selection-start="2669" selection-end="2669" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1649">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="49" selection-start="3458" selection-end="3458" vertical-scroll-proportion="-50.346153" vertical-offset="0" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orderdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="14" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/productdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="0" selection-start="3454" selection-end="3454" vertical-scroll-proportion="0.0" vertical-offset="1649" max-vertical-offset="2397">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="333" column="11" selection-start="10980" selection-end="10980" vertical-scroll-proportion="-18.96" vertical-offset="5170" max-vertical-offset="5746">
+          <folding>
+            <marker date="1395519261149" expanded="true" signature="1086:1115" placeholder="drop table i..." />
+            <marker date="1395519261149" expanded="true" signature="1134:1162" placeholder="drop table i..." />
+            <marker date="1395519261149" expanded="true" signature="1181:1263" placeholder="create table..messages..." />
+            <marker date="1395519261149" expanded="true" signature="1282:1475" placeholder="create table..product..." />
+            <marker date="1395519261149" expanded="true" signature="2082:2158" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="2333:2386" placeholder="SELECT Produ..product..." />
+            <marker date="1395519261149" expanded="true" signature="2901:2945" placeholder="SELECT Passw..user..." />
+            <marker date="1395519261149" expanded="true" signature="3240:3284" placeholder="UPDATE user ..." />
+            <marker date="1395519261149" expanded="true" signature="3626:3691" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="4786:4934" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="5343:5389" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="5710:5751" placeholder="SELECT * fro..messages..." />
+            <marker date="1395519261149" expanded="true" signature="6048:6069" placeholder="select * fro..Product..." />
+            <marker date="1395519261149" expanded="true" signature="6185:6239" placeholder="select * fro..Product..." />
+            <marker date="1395519261149" expanded="true" signature="6355:6396" placeholder="select * fro..offer..." />
+            <marker date="1395519261149" expanded="true" signature="6672:6717" placeholder="SELECT Autho..user..." />
+            <marker date="1395519261149" expanded="true" signature="6858:6911" placeholder="UPDATE user ..." />
+            <marker date="1395519261149" expanded="true" signature="7181:7199" placeholder="SELECT * fro..user..." />
+            <marker date="1395519261149" expanded="true" signature="7520:7562" placeholder="DELETE FROM ..." />
+            <marker date="1395519261149" expanded="true" signature="7951:7995" placeholder="SELECT usern..user..." />
+            <marker date="1395519261149" expanded="true" signature="8517:8562" placeholder="select * fro..product..." />
+            <marker date="1395519261149" expanded="true" signature="8772:8815" placeholder="select autho..user..." />
+            <marker date="1395519261149" expanded="true" signature="9055:9199" placeholder="UPDATE produ..." />
+            <marker date="1395519261149" expanded="true" signature="9406:9482" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="9557:9583" placeholder="SELECT last_..." />
+            <marker date="1395519261149" expanded="true" signature="9668:9772" placeholder="insert into ..." />
+            <marker date="1395519261149" expanded="true" signature="9978:10013" placeholder="select * fro..user..." />
+            <marker date="1395519261149" expanded="true" signature="10275:10316" placeholder="select user_..user..." />
+            <marker date="1395519261149" expanded="true" signature="10470:10510" placeholder="delete FROM ..." />
+            <marker date="1395519261149" expanded="true" signature="10635:10680" placeholder="SELECT * fro..orderregister..." />
+            <marker date="1395519261149" expanded="true" signature="10819:10876" placeholder="SELECT * fro..order_product_occurrance..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="23" selection-start="234" selection-end="234" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="561">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/masterpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="31" selection-start="2762" selection-end="2762" vertical-scroll-proportion="-9.461538" vertical-offset="842" max-vertical-offset="2125">
+        <state line="125" column="18" selection-start="5221" selection-end="5221" vertical-scroll-proportion="-16.23077" vertical-offset="1703" max-vertical-offset="2278">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/V0.42.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="30" selection-start="3178" selection-end="3178" vertical-scroll-proportion="0.7041096" vertical-offset="1477" max-vertical-offset="10149">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10149">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V0.4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="224" selection-end="224" vertical-scroll-proportion="0.08793104" vertical-offset="0" max-vertical-offset="10149">
           <folding />
         </state>
       </provider>

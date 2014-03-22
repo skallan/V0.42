@@ -1,0 +1,101 @@
+{% extends "masterpage.html" %}
+{% block content %}
+
+    <head>
+        <style>
+            .get-in-touch {
+                position: relative;
+                margin: 0 auto;
+                padding: 30px;
+                max-width: 470px;
+                border-radius: 3px;
+                height:800px;
+            }
+
+            .get-in-touch input[type=text],.get-in-touch input[type=email], .get-in-touch textarea {
+                background: rgb(235, 241, 245);
+                color: #110107;
+            }
+
+            .get-in-touch  input:focus, .get-in-touch  textarea:focus {
+                outline: 0;
+                background: rgba(152, 217, 255, 0);}
+        </style>
+    </head>
+
+    <body>
+    {% if session.logged_in %}
+        <div class="row">
+            {% for user in user %}
+
+
+
+                <div class="row">
+                <div class="col-mid-4">
+                <form method="post" action="{{ url_for('change_user') }}" class="form" enctype="multipart/form-data">
+                    <div class="get-in-touch">
+                        <div class="form-group">
+                            Username:  <input type="text" class="form-control" name="username"  placeholder="{{ user[1] }}" disabled/>
+                        </div>
+                        <div class="form-group">
+                            Customer number: <input type="text" class="form-control" name="user_id"  placeholder="{{ user[0] }}" disabled/>
+                        </div>
+                        <div class="form-group">
+                            First Name:  <input type="text" class="form-control" name="firstname"  placeholder="{{ user[4] }}"required/>
+                        </div>
+                        <div class="form-group">
+                            Last Name: <input type="text" class="form-control" name="surname"  placeholder="{{ user[5]}}"  required/>
+                        </div>
+                        <div class="form-group">
+                            Birthday: <input type="date" class="form-control" name="birthday"  required/>
+                        </div>
+                        <div class="form-group">
+                            Adress: <input type="text" class="form-control" name="adress"  placeholder="Adress" required/>
+                        </div>
+                        <div class="form-group">
+                            Postal code: <input type="number" class="form-control" name="postal code" placeholder="Postal Code" required/>
+                        </div>
+                        <div class="form-group">
+                            Email: <input type="email" class="form-control" name="email"  placeholder="email" required/>
+                        </div>
+                        <div class="form-group">
+                            Company: <input type="text" class="form-control" name="company" placeholder="Company" />
+                        </div>
+
+                        <input type="submit" value="Save my changes" class="btn btn-success btn-sm btn-block" role="button" />
+                        <br>
+                    </div>
+
+                </form>
+                <p>Change Password</p>
+                 <div class=flash>
+            {{ error }}
+        </div>
+                <form action="{{ url_for('changepassword') }}" method=post class="form" enctype="multipart/form-data">
+                    <dl>
+                        <dt>Old password:
+                        <dd><div class="form-group">
+                        <input type=password name=old_password> </div>
+                        <dt>New Password:
+                        <dd><div class="form-group" ><input type=password name=new_password> </div>
+                        <dt>Confirm Password
+                        <dd><div class="form-group"><input type=password name=confirm_password> </div>
+                        <dd><input type=submit value=Change>
+                    </dl>
+                </form>
+
+
+
+            {% endfor %}
+            <br>
+            </div>
+            </div>
+        </div>
+    {% endif %}
+    </body>
+
+
+
+
+
+{% endblock %}

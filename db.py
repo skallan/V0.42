@@ -12,7 +12,7 @@ def connect_db():
     """
     print "Connectar db"
     try:
-        rv = sqlite3.connect("message.sqlite3")
+        rv = sqlite3.connect("skoab_database.sqlite3")
         print "Creating db"
         rv.row_factory = sqlite3.Row
         return rv
@@ -43,7 +43,7 @@ def setup():
     db.execute("drop table if exists messages")
     db.execute("drop table if exists product")
     db.execute("create table messages(id integer primary key, name text, message text, email text)")
-    db.execute("create table product(product_id integer primary key ,product_name text,price integer ,max_size integer,min_size integer,brand text ,category text,info text,pic_url text, classification integer)")
+    db.execute("create table product(product_id integer primary key ,product_name text,price integer ,max_size integer,min_size integer,brand text ,category text,info text,classification text, pic_url integer)")
     db.commit()
 
 def register_user(username,password,firstname,lastname):
@@ -63,7 +63,7 @@ def register_user(username,password,firstname,lastname):
         db.commit()
         return True
 
-#NOT WORKING FIX
+
 def get_product_id(name):
     c = get_db()
     cursor = c.cursor()
@@ -71,6 +71,7 @@ def get_product_id(name):
     result = cursor.fetchone()
     product_id = str(result[0])
     return product_id
+
 
 def check_password(username, password):
     """
@@ -93,10 +94,12 @@ def check_password(username, password):
         else:
             return False
 
+
 def change_password(username,password):
     c = get_db()
     c.execute("UPDATE user SET Password=? WHERE username =?", (password, username))
     c.commit()
+
 
 def add_new_message(name, message, email, category):
     """
@@ -110,7 +113,8 @@ def add_new_message(name, message, email, category):
     c.execute("insert into messages(name,message,email,category) values(?,?,?,?)", (name, message, email, category))
     c.commit()
 
-def add_new_product (product_id, product_name, price, max_size, min_size, brand, category, info, pic_url, classification):
+
+def add_new_product (product_id, product_name, price, max_size, min_size, brand, category, info, classification, pic_url):
     """
     Allows a user to add new products to the database
 
@@ -126,7 +130,7 @@ def add_new_product (product_id, product_name, price, max_size, min_size, brand,
     :param classification: The product classification of the new product, input by the user.
     """
     c = get_db()
-    c.execute("insert into Product(product_id, product_name, price, max_size, min_size, brand, category, info, pic_url, classification) values(?,?,?,?,?,?,?,?,?,?)",[product_id, product_name,price,max_size,min_size,brand,category,info,pic_url,classification])
+    c.execute("insert into Product(product_id, product_name, price, max_size, min_size, brand, category, info, classification, pic_url) values(?,?,?,?,?,?,?,?,?,?)",[product_id, product_name,price,max_size,min_size,brand,category,info,classification,pic_url])
     c.commit()
 
 
@@ -154,6 +158,7 @@ def get_messages(type):
     c.commit()
     return result.fetchall()
 
+
 def get_all_products():
     """
     Picks out all the products in the database and returns them.
@@ -165,17 +170,20 @@ def get_all_products():
     c.commit()
     return result.fetchall()
 
+
 def get_index_products():
     c = get_db()
     result = c.execute("select * from Product ORDER BY Product_ID desc limit 6")
     c.commit()
     return result.fetchall()
 
+
 def get_offer_products():
     c = get_db()
     result = c.execute("select * from offer ORDER BY offer_id asc")
     c.commit()
     return result.fetchall()
+
 
 def set_admin(name):
     """
@@ -195,6 +203,7 @@ def set_admin(name):
         c.commit()
     return True
 
+
 def get_all_users():
     """
     A function that returns all the information about the users
@@ -206,6 +215,7 @@ def get_all_users():
     cursor.execute('SELECT * from user')
     result = cursor.fetchall()
     return result
+
 
 def remove_user(name):
     """
@@ -221,6 +231,7 @@ def remove_user(name):
         c.execute(s)
         c.commit()
     return True
+
 
 def check_username(name):
     """
@@ -257,12 +268,6 @@ def get_specific_product(type,id,sort):
     c.commit()
     return result.fetchall()
 
-def get_user(username):
-    c = get_db()
-    result = c.execute('select * from user where username=?', [username])
-    c.commit()
-    user=result.fetchall()
-    return user
 
 def get_authority(user_name):
     c = get_db()
@@ -271,21 +276,31 @@ def get_authority(user_name):
     authority=int(result.fetchone()[0])
     return authority
 
-def alter_product(product_id, product_name, price, max_size, min_size, brand, category, info, classification, filename):
+
+def alter_product(product_id, product_name, price, max_size, min_size, brand, category, info, pic_url, filename):
     c = get_db()
-    c.execute("UPDATE product SET Product_Name=?, Price=?, Max_size=?, Min_size=?, Brand=?, Category=?, Info=?, Pic_url=?, Classification=? WHERE product_id =?", (product_name, price, max_size, min_size, brand, category, info, filename, classification, product_id))
+    c.execute("UPDATE product SET Product_Name=?, Price=?, Max_size=?, Min_size=?, Brand=?, Category=?, Info=?, classification=?, pic_url=? WHERE product_id =?", (product_name, price, max_size, min_size, brand, category, info, filename, pic_url, product_id))
     c.commit()
 
 
-def add_new_order(user_id, date_placed, date_delivered, products):
+def add_new_order(user_id, date_placed, products, total):
     c = get_db()
-    c.execute("insert into orderregister(user_id, date_placed, date_delivered) values(?,?,?)", [user_id, date_placed, date_delivered])
+    c.execute("insert into orderregister(user_id, date_placed, total_ammount) values(?,?,?)", [user_id, date_placed, total])
     c.commit()
     order_id = c.execute("SELECT last_insert_rowid()").fetchall()[0][0]
     d = get_db()
     for product in products:
-        d.execute("insert into order_product_occurrance(order_id, product_id, size, amount) values(?,?,?,?)", [order_id, product[0], product[1], product[2]])
+        d.execute("insert into order_product_occurrence(order_id, product_id, size, quantity, unit_price) values(?,?,?,?,?)", [order_id, product[0], product[1], product[2], product[3]])
         d.commit()
+
+
+#Väldigt lik funktionen under och bör slås ihop med den.
+def get_user(username):
+    c = get_db()
+    result = c.execute('select * from user where username=?', [username])
+    c.commit()
+    user=result.fetchall()
+    return user
 
 def get_user_id(user_name):
     """ Gets user_id from input username :param user_name: Username of wanted user :return: User_id of wanted user """
@@ -294,6 +309,7 @@ def get_user_id(user_name):
     c.commit()
     user_id=int(result.fetchone()[0])
     return user_id
+
 
 def remove_product(product_id):
     c = get_db()

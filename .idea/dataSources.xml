@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4264993552">
-    <data-source source="LOCAL" name="message" uuid="c44e7e84-7e07-4ea1-81fe-6ef1ce50ccfd">
+  <component name="DataSourceManagerImpl" format="xml" hash="3219175333">
+    <data-source source="LOCAL" name="skoab_database" uuid="786df309-29ae-4b4c-a4b0-785537f7f339">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Joel\Documents\GitHub\V0.42\message.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Hedin\Documents\programering\V0.41\skoab_database.sqlite3</jdbc-url>
       <libraries />
     </data-source>
   </component>

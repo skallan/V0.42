@@ -107,6 +107,15 @@
                     {% endif %}
                 {% endif %}
                 </li>
+
+                <li {% if "login" == active_page %} class="active"{% endif%}>
+                    {% if not session.logged_in %}
+                        <a href="/login">Login</a>
+                    {% else %}
+
+                        <a href="/logout">Logout</a>
+                    {% endif %}
+                </li>
                 <li>
 
             </ul>

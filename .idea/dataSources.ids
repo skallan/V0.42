@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="message" uuid="c44e7e84-7e07-4ea1-81fe-6ef1ce50ccfd">
+  <data-source source="LOCAL" name="skoab_database" uuid="786df309-29ae-4b4c-a4b0-785537f7f339">
     <database-info product="SQLite" version="3.7.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
     <schema name="" catalog=""/>
@@ -10,6 +10,7 @@
       <column name="message" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="Email" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="Category" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="Status" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>
     <table name="offer" schema="" catalog="" type="TABLE">
@@ -18,23 +19,26 @@
       <column name="url_to" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <primary-key columns="offer_id"/>
     </table>
-    <table name="order_product_occurrance" schema="" catalog="" type="TABLE">
-      <column name="Order_ID" sqlType="INT(11)" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
-      <column name="Product_ID" sqlType="INT(11)" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
-      <column name="Size" sqlType="INT(11)" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
-      <column name="Amount" sqlType="INT(11)" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+    <table name="order_product_occurrence" schema="" catalog="" type="TABLE">
+      <column name="Order_ID" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="Product_ID" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="Size" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="Quantity" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="Unit_price" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
       <primary-key columns="Order_ID,Product_ID,Size"/>
-      <foreign-key name="#FAKE_order_product_occurrance_1" columns="Order_ID" ref-table="orderregister" ref-schema="" ref-catalog="" ref-columns="Order_ID" update-rule="0" delete-rule="0" deferrability="1"/>
-      <foreign-key name="#FAKE_order_product_occurrance_2" columns="Product_ID" ref-table="product" ref-schema="" ref-catalog="" ref-columns="Product_ID" update-rule="0" delete-rule="0" deferrability="1"/>
+      <foreign-key name="#FAKE_order_product_occurrence_1" columns="Product_ID" ref-table="product" ref-schema="" ref-catalog="" ref-columns="Product_ID" update-rule="0" delete-rule="0" deferrability="1"/>
+      <foreign-key name="#FAKE_order_product_occurrence_2" columns="Order_ID" ref-table="orderregister" ref-schema="" ref-catalog="" ref-columns="Order_ID" update-rule="0" delete-rule="0" deferrability="1"/>
     </table>
     <table name="orderregister" schema="" catalog="" type="TABLE">
       <column name="Order_ID" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
       <column name="User_ID" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
       <column name="Date_placed" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
-      <column name="Date_delivered" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="Date_confirmed" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="Date_shipped" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="Total_ammount" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
       <primary-key columns="Order_ID"/>
       <foreign-key name="#FAKE_orderregister_1" columns="User_ID" ref-table="user" ref-schema="" ref-catalog="" ref-columns="User_ID" update-rule="0" delete-rule="0" deferrability="1"/>
-      <exported-key name="#FAKE_order_product_occurrance_1" table="order_product_occurrance" schema="" catalog="" columns="Order_ID"/>
+      <exported-key name="#FAKE_order_product_occurrence_2" table="order_product_occurrence" schema="" catalog="" columns="Order_ID"/>
     </table>
     <table name="product" schema="" catalog="" type="TABLE">
       <column name="Product_ID" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
@@ -45,10 +49,11 @@
       <column name="Brand" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="Category" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="Info" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
-      <column name="Pic_url" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="Classification" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="Pic_url" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="Active" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
       <primary-key columns="Product_ID"/>
-      <exported-key name="#FAKE_order_product_occurrance_2" table="order_product_occurrance" schema="" catalog="" columns="Product_ID"/>
+      <exported-key name="#FAKE_order_product_occurrence_1" table="order_product_occurrence" schema="" catalog="" columns="Product_ID"/>
     </table>
     <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
       <column name="name" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
@@ -61,6 +66,14 @@
       <column name="Password" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="Firstname" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="Surname" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="Email" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="Telephone" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="org_no" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="org_name" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="Address_field1" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="Address_field2" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="zipcode" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="city" sqlType="TEXT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <primary-key columns="User_ID"/>
       <exported-key name="#FAKE_orderregister_1" table="orderregister" schema="" catalog="" columns="User_ID"/>
     </table>

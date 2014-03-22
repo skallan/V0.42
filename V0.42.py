@@ -572,7 +572,7 @@ def add_order():
     for x in session['cart']:
         products.append([x['item'], x['size'], x['quantity'], x['price']])
         total += x['price']*x['quantity']
-    db.add_new_order(db.get_user_id(session['username']), date_placed, products, total)
+    order_nr = db.add_new_order(db.get_user_id(session['username']), date_placed, products, total)
     session['cart'] = []
     return render_template("cart.html")
 

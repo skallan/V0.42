@@ -297,11 +297,13 @@ def add_new_order(user_id, date_placed, products, total):
     c = get_db()
     c.execute("insert into orderregister(user_id, date_placed, total_ammount) values(?,?,?)", [user_id, date_placed, total])
     c.commit()
-    order_id = c.execute("SELECT last_insert_rowid()").fetchall()[0][0]
+    new_order_id = c.execute("SELECT last_insert_rowid()")
+    order_id = c.execute(new_order_id).fetchall()[0][0]
     d = get_db()
     for product in products:
         d.execute("insert into order_product_occurrence(order_id, product_id, size, quantity, unit_price) values(?,?,?,?,?)", [order_id, product[0], product[1], product[2], product[3]])
         d.commit()
+    return new_order_id
 
 
 #Väldigt lik funktionen under och bör slås ihop med den.

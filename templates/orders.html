@@ -25,7 +25,7 @@
     {% for x in order_list %}
     <div class="order">
     <div class='row'>
-    <h4>Order #{{ x[0] }} placed at {{x[2]}}</h4>
+    <h4>Order #{{ x[0] }} placed at {{x[2]}} total amount {{ x[5] }}</h4>
     <a class="btn btn-success" href="/orders/{{ x[0] }}" role="button">View order details &raquo;</a>
     </div>
     </div>

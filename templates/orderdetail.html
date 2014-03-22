@@ -25,13 +25,13 @@
     {% for order,product in order_details  %}
     <div class="order">
     <div class='row'>
-    <div class='col-md-3'>
+    <div class='col-md-2'>
     <a href="/products/{{ product[1]}}">
     <img src="/static/uploads/{{ product[9] }}" width="100px" height="90px" >
     </a>
     <br>
     </div>
-    <div class='col-md-3'>
+    <div class='col-md-4'>
     <h4>{{ product[1]}} - {{ product[5]}}</h4>
     <h5>Size: {{order[2]}}</h5>
     <a class="btn btn-success" href="/products/{{ product[1] }}" role="button">View product details &raquo;</a>
@@ -40,11 +40,21 @@
     <h4>Quantity: {{order[3]}}</h4>
     </div>
     <div class='col-md-3'>
-    <h4> Price:</h4>
+    <h4> Price:{{ order[4]}}</h4>
     </div>
     </div>
     </div>
     {% endfor %}
+    <div class="order">
+    <div class='row'>
+    <div class='col-md-9'>
+    <h4>Total</h4>
+    </div>
+    <div class='col-md-3'>
+    <h4>Total</h4>
+    </div>
+    </div>
+    </div>
     {% endif %}
     </div>
     </body>

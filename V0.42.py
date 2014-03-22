@@ -10,10 +10,7 @@ import db
 app = Flask(__name__)
 
 app.config.update(dict(
-    DATABASE='flaskr.db',
     SECRET_KEY='os.urandom(24)',
-    USERNAME='admin',
-    PASSWORD='default',
     UPLOAD_FOLDER='C:\Users\Patrick\Desktop\PycharmProjects\V0.42\static\uploads',
     ALLOWED_EXTENSIONS={'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'JPG'}
 ))
